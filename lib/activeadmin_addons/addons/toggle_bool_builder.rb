@@ -12,11 +12,10 @@ module ActiveAdminAddons
       toggle_classes = 'toggle-bool-switch'
       toggle_classes += ' on' if data
       toggle_classes += ' notify-success' if options[:success_message]
-
+      
       config = context.active_admin_resource_for(model.class)
       return unless config
       url = config.route_instance_path(model, {})
-      byebug
 
       context.span(
         '',
